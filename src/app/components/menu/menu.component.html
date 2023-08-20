@@ -1,1 +1,12 @@
-<p>menu works!</p>
+<div class="xl:flex gap-8 hidden">
+  <ng-container *ngFor="let menu of menus">
+    <button
+      [ngClass]="{ 'border-b-4 border-orange-900': menu.isActive }"
+      class="p-4 hover:border-b-4 hover:border-orange-900"
+    >
+      <span [ngClass]="{ 'text-orange-900 font-semibold': menu.isActive }">
+        {{ menu.name }}
+      </span>
+    </button>
+  </ng-container>
+</div>

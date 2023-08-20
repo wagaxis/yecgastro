@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +7,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  protected readonly faSearch = faSearch;
-  protected readonly faBars = faBars;
+  readonly faSearch = faSearch;
+  readonly faBars = faBars;
 }
