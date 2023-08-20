@@ -2,6 +2,7 @@
   <ng-container *ngFor="let menu of menus">
     <button
       [ngClass]="{ 'border-b-4 border-orange-900': menu.isActive }"
+      (click)="selectMenu(menu)"
       class="p-4 hover:border-b-4 hover:border-orange-900"
     >
       <span [ngClass]="{ 'text-orange-900 font-semibold': menu.isActive }">
@@ -9,4 +10,18 @@
       </span>
     </button>
   </ng-container>
+</div>
+<div class="relative">
+  <div
+    *ngIf="openMenu"
+    class="xl:hidden flex flex-col rounded absolute -right-14"
+  >
+    <ng-container *ngFor="let menu of menus">
+      <button class="p-4 hover:bg-gray-100" (click)="selectMenu(menu)">
+        <span [ngClass]="{ 'text-orange-900 font-semibold': menu.isActive }">
+          {{ menu.name }}
+        </span>
+      </button>
+    </ng-container>
+  </div>
 </div>

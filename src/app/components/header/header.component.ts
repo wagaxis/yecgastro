@@ -7,6 +7,7 @@ import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  mobileMenu = false;
   readonly faSearch = faSearch;
   readonly faBars = faBars;
 }

@@ -6,14 +6,14 @@ import { Menu } from './menu';
 })
 export class MenuService {
   allMenus: Menu[] = [
-    { name: 'Home', isActive: true },
+    { name: 'home', isActive: true },
     { name: 'ourMenu', isActive: false },
     {
-      name: 'About',
+      name: 'about',
       isActive: false,
     },
     {
-      name: 'Contact',
+      name: 'contact',
       isActive: false,
     },
   ];

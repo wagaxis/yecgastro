@@ -1,12 +1,16 @@
 <div class="flex justify-between p-5 xl:mx-96 gap-8">
   <div>İmage</div>
-  <app-menu></app-menu>
+  <app-menu class="hidden xl:flex" [openMenu]="mobileMenu"></app-menu>
   <div class="flex gap-4">
-    <button
-      class="bg-transparent hover:bg-gray-200 text-orange-900 hover:text-orange-500 text-xl p-1 rounded"
-    >
-      <fa-icon [icon]="faBars"></fa-icon>
-    </button>
+    <div class="xl:hidden flex flex-col">
+      <button
+        (click)="mobileMenu = !mobileMenu"
+        class="bg-transparent hover:bg-gray-200 text-orange-900 hover:text-orange-500 text-xl p-1 rounded"
+      >
+        <fa-icon [icon]="faBars"></fa-icon>
+      </button>
+      <app-menu class="flex xl:hidden" [openMenu]="mobileMenu"></app-menu>
+    </div>
     <button
       class="bg-transparent hover:bg-gray-200 text-orange-900 hover:text-orange-500 text-xl p-1 rounded"
     >
