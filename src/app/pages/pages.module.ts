@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -28,6 +28,6 @@ import { PriceListComponent } from '../components/price-list/price-list.componen
     MealImagesComponent,
     PriceListComponent,
   ],
-  imports: [CommonModule, PagesRoutingModule],
+  imports: [CommonModule, PagesRoutingModule, NgOptimizedImage],
 })
 export class PagesModule {}

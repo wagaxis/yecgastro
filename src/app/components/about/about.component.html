@@ -3,14 +3,14 @@
     class="flex flex-wrap gap-8 items-center justify-center max-w-6xl mx-auto"
   >
     <img
-      src="assets/images/about-food-1-676x1024.webp"
+      ngSrc="assets/images/about-food-1-676x1024.webp"
       alt="about-food-1"
       width="265"
       height="400"
       class="rounded-xl"
     />
     <img
-      src="assets/images/about-food-2-676x1024.webp"
+      ngSrc="assets/images/about-food-2-676x1024.webp"
       alt="about-food-2"
       width="265"
       height="400"
@@ -43,7 +43,7 @@
         <div class="flex gap-4 mb-2 items-center justify-center">
           <img
             *ngFor="let food of aboutFoods"
-            [src]="food"
+            [ngSrc]="food"
             alt="about-food-3"
             width="150"
             height="95"
