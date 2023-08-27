@@ -1,1 +1,56 @@
-<p>about works!</p>
+<div class="bg-cover bg-no-repeat bg-center bg-about">
+  <div
+    class="flex flex-wrap gap-8 items-center justify-center max-w-6xl mx-auto"
+  >
+    <img
+      src="assets/images/about-food-1-676x1024.webp"
+      alt="about-food-1"
+      width="265"
+      height="400"
+      class="rounded-xl"
+    />
+    <img
+      src="assets/images/about-food-2-676x1024.webp"
+      alt="about-food-2"
+      width="265"
+      height="400"
+      class="rounded-xl mt-28"
+    />
+    <div class="flex gap-8">
+      <div class="flex flex-col gap-5">
+        <h2 class="text-3xl text-title font-poppins font-medium">Hakkımızda</h2>
+        <div class="flex flex-col gap-5">
+          <h3 class="text-5xl font-bold text-default">Yeç Gastro Kimdir?</h3>
+          <span class="text-base text-description">
+            Hizmet, lezzet ve müşteri memnuniyeti odaklı, Catering sektöründe
+            kaliteli hizmet için proje geliştiren müşterinin talep ettiği
+            ürünleri hijyenik, sağlıklı ve lezzetli olmasını vizyon edinmiş
+            Catering firmasıdır.
+          </span>
+        </div>
+        <div class="flex items-center justify-center gap-8">
+          <button
+            class="bg-title text-white font-poppins py-2 px-4 rounded mb-2 w-40 hover:bg-hover"
+          >
+            Teklif Al
+          </button>
+          <button
+            class="bg-title text-white font-poppins py-2 px-4 rounded mb-2 w-40 hover:bg-hover"
+          >
+            Daha Fazla
+          </button>
+        </div>
+        <div class="flex gap-4 mb-2 items-center justify-center">
+          <img
+            *ngFor="let food of aboutFoods"
+            [src]="food"
+            alt="about-food-3"
+            width="150"
+            height="95"
+            class="rounded-xl"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
