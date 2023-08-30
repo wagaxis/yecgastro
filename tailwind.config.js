@@ -6,9 +6,11 @@ module.exports = {
       backgroundImage: {
         wellcome: "url('assets/images/b.webp')",
         about: "url('assets/images/about-food-bg.webp')",
+        bestSellingDishes: "url('assets/images/best-selling-dishes-bg.webp')",
       },
       fontFamily: {
         poppins: ["Poppins"],
+        cursive: ["Cursive"],
         playfair: ["Playfair Display"],
       },
       colors: {

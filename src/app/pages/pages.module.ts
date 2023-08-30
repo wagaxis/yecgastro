@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +13,7 @@ import { AboutMealsComponent } from '../components/about-meals/about-meals.compo
 import { ContactComponent } from '../components/contact/contact.component';
 import { MealImagesComponent } from '../components/meal-images/meal-images.component';
 import { PriceListComponent } from '../components/price-list/price-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,11 @@ import { PriceListComponent } from '../components/price-list/price-list.componen
     MealImagesComponent,
     PriceListComponent,
   ],
-  imports: [CommonModule, PagesRoutingModule, NgOptimizedImage],
+  imports: [
+    CommonModule,
+    PagesRoutingModule,
+    NgOptimizedImage,
+    FontAwesomeModule,
+  ],
 })
 export class PagesModule {}
