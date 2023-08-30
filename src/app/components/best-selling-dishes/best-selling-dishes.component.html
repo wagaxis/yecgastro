@@ -1,1 +1,58 @@
-<p>best-selling-dishes works!</p>
+<div
+  class="bg-white opacity-90 flex flex-col items-center justify-center gap-20 px-10 py-16 transition z-10"
+>
+  <h2 class="text-title font-poppins text-3xl text-semibold z-20">
+    En Çok Tercih Edilen Yemekler
+  </h2>
+  <div class="flex items-center justify-center gap-8 relative z-20">
+    <ng-container *ngFor="let item of sliderItems; let i = index">
+      <!-- Left Arrow -->
+      <button
+        *ngIf="i === 0"
+        class="flex items-center justify-center rounded-full bg-gray-100 bg-opacity-50 h-10 w-10 hover:bg-opacity-100 transition duration-300 absolute -left-6"
+        (click)="sliderDrag(DirectionEnum.Left)"
+      >
+        <fa-icon
+          class="flex flex-col items-center justify-center"
+          [icon]="faArrowLeft"
+        ></fa-icon>
+      </button>
+      <!-- Card -->
+      <div
+        *ngIf="i < getShowCount"
+        class="flex flex-col bg-white rounded-xl shadow-2xl min-w-40"
+      >
+        <img
+          *ngIf="item.image"
+          [ngSrc]="item.image"
+          [alt]="item.alt"
+          class="rounded-t-xl"
+          height="330"
+          width="275"
+        />
+        <span
+          class="font-cursive text-default text-base whitespace-nowrap font-medium p-4"
+        >
+          {{ item.name }}
+        </span>
+        <button
+          class="bg-title text-white font-cursive font-semibold text-base rounded-b-xl p-4 hover:bg-hover transition duration-300 mt-auto whitespace-nowrap"
+          (click)="takePrice(item)"
+        >
+          Fiyat Teklifi Al
+        </button>
+      </div>
+      <!-- Right Arrow -->
+      <button
+        *ngIf="i === sliderItems.length - 1"
+        class="flex items-center justify-center rounded-full bg-gray-100 bg-opacity-50 h-10 w-10 hover:bg-opacity-100 transition duration-300 absolute -right-6"
+        (click)="sliderDrag(DirectionEnum.Right)"
+      >
+        <fa-icon
+          class="flex flex-col items-center justify-center"
+          [icon]="faArrowRight"
+        ></fa-icon>
+      </button>
+    </ng-container>
+  </div>
+</div>
